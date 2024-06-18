@@ -1,0 +1,66 @@
+{
+    "$defs": {
+        "Point": {
+            "properties": {
+                "x": {
+                    "title": "X",
+                    "type": "number"
+                },
+                "y": {
+                    "title": "Y",
+                    "type": "number"
+                },
+                "z": {
+                    "title": "Z",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "x",
+                "y",
+                "z"
+            ],
+            "title": "Point",
+            "type": "object"
+        }
+    },
+    "properties": {
+        "id": {
+            "title": "Id",
+            "type": "integer"
+        },
+        "name": {
+            "title": "Name",
+            "type": "string"
+        },
+        "description": {
+            "title": "Description",
+            "type": "string"
+        },
+        "number": {
+            "title": "Number",
+            "type": "integer"
+        },
+        "price": {
+            "title": "Price",
+            "type": "number"
+        },
+        "position": {
+            "items": {
+                "$ref": "#/$defs/Point"
+            },
+            "title": "Position",
+            "type": "array"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "description",
+        "number",
+        "price",
+        "position"
+    ],
+    "title": "Item",
+    "type": "object"
+}
